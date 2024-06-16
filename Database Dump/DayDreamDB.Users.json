@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "660135d73e41fc21171c277b"
+  },
+  "username": "LK669",
+  "password": "Lesotho1726",
+  "phoneNumber": "0553284592"
+},
+{
+  "_id": {
+    "$oid": "66015cec2c9db7cb871b0fda"
+  },
+  "username": "soulette39",
+  "password": "Lesotho1726",
+  "phoneNumber": "0552934769"
+},
+{
+  "_id": {
+    "$oid": "66026c3347f68a7e0b35911f"
+  },
+  "username": "lebo",
+  "password": "Lesotho1726",
+  "phoneNumber": "0552934769"
+},
+{
+  "_id": {
+    "$oid": "661c2ed7d099466276851441"
+  },
+  "username": "Khulan12",
+  "password": "Khulan12",
+  "phoneNumber": "0124567891"
+},
+{
+  "_id": {
+    "$oid": "661d6a5c9db1628839bfea10"
+  },
+  "username": "Phx_Soul",
+  "password": "Lesotho1726",
+  "phoneNumber": "0552934769"
+},
+{
+  "_id": {
+    "$oid": "66227ac85539e24f17b66a94"
+  },
+  "username": "showStopper",
+  "password": "Lesotho1726",
+  "phoneNumber": "0552934769"
+},
+{
+  "_id": {
+    "$oid": "662508e668ceea397c9457e9"
+  },
+  "username": "cst2120",
+  "password": "Lesotho1726",
+  "phoneNumber": "0552934769"
+}]

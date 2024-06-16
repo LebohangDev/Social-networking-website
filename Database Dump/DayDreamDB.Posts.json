@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "6625096b68ceea397c9457ea"
+  },
+  "filename": "gameplay img.png",
+  "type": "image",
+  "text": "daydream!\r\n                ",
+  "username": "soulette39",
+  "userId": {
+    "$oid": "66015cec2c9db7cb871b0fda"
+  },
+  "likes": 4,
+  "postId": "6625096b68ceea397c9457ea",
+  "likedBy": [
+    "soulette39",
+    "LK669",
+    "lebo",
+    "Phx_Soul"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66262a5db34b7cbe552d6eca"
+  },
+  "filename": "18745215401671612288.jpg",
+  "type": "image",
+  "text": "nagii!!!!!\r\n                ",
+  "username": "LK669",
+  "userId": {
+    "$oid": "660135d73e41fc21171c277b"
+  },
+  "likes": 2,
+  "postId": "66262a5db34b7cbe552d6eca",
+  "likedBy": [
+    "LK669",
+    "lebo"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66262a71b34b7cbe552d6ecd"
+  },
+  "filename": "1927471-u1.jfif",
+  "type": "image",
+  "text": "bruh ong this scene was fireee!",
+  "username": "LK669",
+  "userId": {
+    "$oid": "660135d73e41fc21171c277b"
+  },
+  "likes": 1,
+  "postId": "66262a71b34b7cbe552d6ecd",
+  "likedBy": [
+    "LK669"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66262aa5b34b7cbe552d6ed0"
+  },
+  "filename": "jessica-lewis-DeyfdybVQhA-unsplash1696597159087.jpg",
+  "type": "image",
+  "text": "boreddd!!! check this out tho cool headset\r\n                ",
+  "username": "Khulan12",
+  "userId": {
+    "$oid": "661c2ed7d099466276851441"
+  },
+  "likes": 2,
+  "postId": "66262aa5b34b7cbe552d6ed0",
+  "likedBy": [
+    "lebo",
+    "Phx_Soul"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66262addb34b7cbe552d6ed2"
+  },
+  "filename": "main-qimg-868a53e5f9ae1c268fec515648313ef2-lq.jfif",
+  "type": "image",
+  "text": "sasuke or naruto??",
+  "username": "soulette39",
+  "userId": {
+    "$oid": "66015cec2c9db7cb871b0fda"
+  },
+  "likes": 3,
+  "postId": "66262addb34b7cbe552d6ed2",
+  "likedBy": [
+    "LK669",
+    "Phx_Soul",
+    "soulette39"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66262c36b34b7cbe552d6ee3"
+  },
+  "filename": "ManCity.jpg",
+  "type": "image",
+  "text": "Lets go cityyy!!!!\r\n                ",
+  "username": "Phx_Soul",
+  "userId": {
+    "$oid": "661d6a5c9db1628839bfea10"
+  },
+  "likes": 1,
+  "postId": "66262c36b34b7cbe552d6ee3",
+  "likedBy": [
+    "soulette39"
+  ]
+}]

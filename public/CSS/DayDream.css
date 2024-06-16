@@ -1,0 +1,2109 @@
+/* default styles for all elements */
+* {
+    padding: 0; /* Resetting padding to 0 for all elements */
+    margin: 0; /* Resetting margin to 0 for all elements */
+    box-sizing: border-box; /* Ensuring box-sizing includes border and padding in the element's total width and height */
+    font-family: 'Agbalumo', system-ui; /* Setting default font family for all elements */
+    text-decoration: none; /* Removing text decoration for all elements */
+    list-style: none; /* Removing list styles for all elements */
+    resize: none;
+}
+
+/* Styling for specific font class */
+.anta-regular {
+    font-family: "Anta", sans-serif; /* Setting font family for elements with class "anta-regular" */
+    font-weight: 400; /* Setting font weight for elements with class "anta-regular" */
+    font-style: normal; /* Setting font style for elements with class "anta-regular" */
+}
+
+/* defining CSS variables for text color and main color */
+:root {
+    --text-color: #FFFFFF; /* Defining variable for text color */
+    --main-color: #15aae0; /* Defining variable for main color */
+}
+
+/* Styling applied for the body */
+body {
+    min-height: 150vh; /* Setting minimum height of body to 150 viewport height units */
+    background: rgb(0,0,0); /* Setting fallback background color for body */
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(36,33,33,1) 26%, rgba(99,97,97,1) 100%); /* Applying linear gradient background to body */
+    background-size: cover; /* Ensuring background image covers the entire body */
+    background-repeat: repeat; /* Repeating background if necessary */
+}
+
+/* Styling for the navbar container */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24%;
+    height: 100vh; 
+    background-color: #333; /* Background color */
+
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box; 
+    
+    border-top-right-radius: 15px; /* Border radius for top-right corner */
+    border-bottom-right-radius: 15px;
+}
+
+/* Creative border-right styling */
+.navbar-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 13px; 
+    background-color: #1e90ff; /* Initial border color */
+    border-top-right-radius: 15px; /* Border radius for top-right corner */
+    border-bottom-right-radius: 15px; /* Border radius for bottom-right corner */
+   
+    z-index: -1;
+    animation: changeColor 2s infinite; /* Apply keyframe animation */
+}
+
+
+/* Keyframe animation for changing border color */
+@keyframes changeColor {
+    0% {
+        background-color: #1e90ff; /* Initial border color */
+    }
+    50% {
+        background-color: #10cbec; /* Next border color */
+    }
+    100% {
+        background-color: #1e90ff /* Final border color */
+    }
+}
+
+/* Styling for the navbar */
+.navbar {
+    position: fixed; 
+    top: 30%; 
+    left: 5%; 
+    font-size: 60px; 
+    color: var(--text-color); 
+}
+
+/* Styling for navbar items */
+.nav-item a {
+    color: whitesmoke; /* Setting text color for navbar items */
+}
+
+/* Styling for the logo container */
+.Logo-container h1 {
+    color: var(--text-color); 
+    position: fixed; 
+    left: 3%; 
+    top: 6.5%; 
+    font-size: 40px; 
+    transition: .5s; 
+}
+
+/* Styling for the logo line */
+.logo-line {
+    position: fixed; /* Making the logo line fixed position */
+    display: block; /* Displaying the logo line as a block element */
+    margin: 30px 0; /* Setting margin for the logo line */
+    height: 1px; /* Setting height for the logo line */
+    border: none; /* Removing border from the logo line */
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, white)); /* Creating gradient background for the logo line */
+    top: 14%; /* Positioning the logo line from the top */
+    right: 83%; /* Positioning the logo line from the right */
+    width: 14%; /* Setting width for the logo line */
+    height: 0.3%; /* Setting height for the logo line */
+}
+
+/* Styling for the main logo */
+.MainLogo {
+    position: fixed; /* Making the main logo fixed position */
+    color: var(--text-color); /* Setting text color for the main logo using CSS variable */
+    left: 13.5%; /* Positioning the main logo from the left */
+    top: 3%; /* Positioning the main logo from the top */
+    font-size: 100px; /* Setting font size for the main logo */
+    transition: 1s; /* Applying transition effect */
+    animation: hoverAnimation 2s infinite alternate; /* Applying animation effect */
+    transform: translate(-6.5%); /* Applying transformation */
+}
+
+/* Animation keyframe for hover animation */
+@keyframes hoverAnimation {
+    0% {
+        transform: translateY(-10px); /* Setting initial state of animation */
+    }
+    100% {
+        transform: translateY(10px); /* Setting final state of animation */
+    }
+}
+
+
+
+/* Styling for nav links */
+.navbar a  {
+    color: var(--text-color); 
+    font-size: 25px; 
+    font-weight: 300; 
+    padding: 5px 15px; 
+    margin: 0px 25px; 
+    text-align: center; 
+    white-space: nowrap; 
+    transition: all .50s ease; 
+    transition: 0.5s; 
+}
+
+/* Hover styles for navigation links */
+.navbar a:hover  {
+    color: var(--main-color); /* Change color on hover */
+    font-size: 27px; /* Change font size on hover */
+}
+
+  
+  
+  
+ 
+  
+ 
+
+/* Active styles for navigation links */
+.navbar a:active  {
+    color: var(--main-color); /* Change color when link is active */
+}
+/* Icon styles */
+.ri-home-3-fill, .ri-search-2-line,
+.ri-chat-1-line, .ri-notification-2-fill, 
+.ri-user-3-fill, .ri-account-circle-fill {
+    color: var(--text-color); 
+    font-size: 30px; 
+    font-weight: 300; 
+    padding: 0px; /* Reset padding */
+    white-space: nowrap; /* Prevent text from wrapping to next line */
+    transition: all .50s ease; /* Define transition effect */
+}
+
+
+
+/* Styling for login item */
+.Login-item {
+    /* Position login item absolutely */
+    position: absolute;
+    bottom: -40%;
+    right: 45%;
+    font-size: 45px;
+    /* Define transition effect */
+    transition: 1s;
+}
+
+/* Icon inside login item */
+.Login-item i {
+    /* Position icon absolutely */
+    position: absolute;
+    bottom: 30%;
+    right: 55%;
+    font-size: 45px;
+    /* Define transition effect */
+    transition: 0.3s;
+}
+/* Icon inside register item */
+.Register-item i {
+    /* Position icon absolutely */
+    position: absolute;
+    bottom: 30%;
+    right: 77%;
+    font-size: 45px;
+    /* Define transition effect */
+    transition: 0.3s;
+}
+
+
+
+/* Styling for register item */
+.Register-item {
+    /* Position register item absolutely */
+    position: absolute;
+    bottom: -40%;
+    right: -10%;
+    font-size: 45px;
+    /* Define transition effect */
+    transition: 1s;
+}
+/* Styling for Login-text and Register-text */
+.login-text{
+    position: absolute;
+    bottom: -40%;
+    right:60%;
+    font-size: 20px;
+    /* Set initial visibility to hidden */
+    visibility: hidden;
+    transition: 0.1s;
+   
+
+}
+
+
+.register-text{
+    position: absolute;
+    bottom: -40%;
+    right:53%;
+    font-size: 20px;
+    font-size: 20px;
+    /* Set initial visibility to hidden */
+    visibility: hidden;
+    transition: 0.1s;
+
+}
+/* Hover effect for login icon */
+.Login-item i:hover {
+  
+    bottom: 50%;
+    visibility: visible;
+    /* Change color and cursor */
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* Hover effect for register icon */
+.Register-item i:hover {
+    bottom: 50%;
+    visibility: visible; /* Show register text when hovering over the icon */
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* Hover effect for register item */
+.Register-item:hover .register-text {
+  
+    bottom: -10%;
+    visibility: visible;
+}
+
+/* Hover effect for login item */
+.Login-item:hover .login-text {
+    
+    bottom: -10%;
+    visibility: visible;
+}
+
+/* Styling for logout item */
+.Logout-item {
+    
+    position: absolute;
+    bottom: -25%;
+    left: 43%;
+    font-size: 45px;
+    
+    transition: 1s;
+}
+
+/* Icon inside logout item */
+.Logout-item i {
+    
+    position: absolute;
+    bottom: 30%;
+    right: 55%;
+    font-size: 45px;
+    color: var(--text-color);
+   
+    transition: 0.3s;
+}
+
+/* Styling for logout text */
+.Logout-text {
+
+    position: absolute;
+    bottom: 0%;
+    right: 60%;
+    color: var(--text-color);
+    font-size: 20px;
+    /* Set initial visibility to hidden */
+    visibility: hidden;
+    /* Define transition effect */
+    transition: 0.1s;
+}
+
+/* Hover effect for logout icon */
+.Logout-item i:hover {
+    
+    bottom: 50%;
+    visibility: visible;
+    /* Change color and cursor */
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* Hover effect for logout item */
+.Logout-item:hover .Logout-text {
+    
+    bottom: -10%;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+/*Styling for */
+
+
+
+
+/* Styling for Username in post coontainer 1 */
+h3 {
+
+    color: var(--text-color);
+    position: absolute;
+    left: 59.5%;
+    top: 6.5%;
+    font-size: 40px;
+}
+
+/* Styling for Post heading */
+h2 {
+ 
+    color: var(--text-color);
+    position: absolute;
+    left: 59.5%;
+    top: 6.5%;
+    font-size: 40px;
+}
+
+/* Styling for diamond shape */
+.diamond {
+    /* Set background and dimensions */
+    background: whitesmoke;
+    width: 10px;
+    height: 10px;
+    /* Position diamond */
+    position: absolute;
+    top: 16%;
+    left: 62.7%;
+    margin: 0 0 0 -3px;
+    /* Rotate diamond */
+    transform: rotate(45deg);
+}
+
+/* Styling for decorative line for heading */
+.diamond-line {
+    /* Position line */
+    position: absolute;
+    display: block;
+    margin: 30px 0;
+    height: 1px;
+    border: none;
+    /* Set gradient background */
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, white));
+    top: 13.2%;
+    left: 38%;
+    width: 50%;
+}
+
+/* Styling for post container 1 */
+.post-container1 {
+    /* Set dimensions and center container */
+    width: 600px;
+    margin: 0 auto;
+    padding: 180px;
+    /* Add border radius and background color */
+    border-radius: 40px;
+    background-color: #1f1f1f; 
+    transform: translateX(-50%);
+    /* Add box shadow */
+    box-shadow: 0 12px 4px rgba(0, 0, 0, 0.2);
+    /* Position container */
+    position: relative;
+    top: 250px;
+    left: 30%;
+    margin-bottom: 100px; /* Add margin between each post container */
+
+
+}
+
+/* Style for comment form container */
+.comment-form-container {
+    position: fixed;
+    width: 700px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #242323;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.post-user{
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    font-size: 20px;
+    color: whitesmoke;
+
+}
+
+.user-defualt14 {
+    
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top: 1.8%;
+    left: 3%;
+}
+
+/* Style for comment input */
+.comment-input {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin-bottom: 10px;
+    
+}
+.comment-form-container textarea{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    font-size: 15px;
+    color: whitesmoke;
+    background-color: #242323;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+    padding-bottom: 10px;
+    padding-left: 62px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 55px; /* Increased minimum height for a bigger textarea */
+    text-align: left;
+
+}
+
+.ri-chat-smile-3-fill{
+    position: fixed;
+    bottom: 2.7%;
+    left: 2%;
+    font-size: 35px;
+    color: whitesmoke;
+    z-index: 1100;
+}
+
+.comment-form-container ::placeholder{
+    position: fixed;
+    bottom: 40%;
+    left: 7%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+
+
+
+
+
+
+.like-count{
+    position: fixed;
+    bottom: 15%;
+    left: 4%;
+    font-size: 19px;
+    color: whitesmoke;
+}
+
+.comment-count{
+    position: fixed;
+    bottom: 15%;
+    left: 16%;
+    font-size: 19px;
+    color: whitesmoke;
+
+}
+
+.ri-chat-off-line{
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    font-size: 70px;
+    color: whitesmoke;
+    opacity: 0.2;
+}
+
+
+/* Style for comment button */
+.btn {
+    cursor: pointer;
+    position: fixed;
+    bottom: 3.5%;
+    right: 8%;
+    color: rgb(71, 69, 69);
+    background-color: #242323;
+    
+    border: none;
+    font-size: 18px;
+
+}
+
+/* Styling for comment close button */
+
+.comment-close{
+    cursor: pointer;
+    position: fixed;
+    top: 3.5%;
+    right: 8%;
+    color: rgb(71, 69, 69);
+    background-color: #242323;
+    border: none;
+    font-size: 18px;
+}
+
+
+/* Styling for comment container lines */
+
+.comment-line1{
+
+    position: fixed;
+    top: 12%;
+    left: 0%;
+    width: 100%;
+    opacity: 0.4;
+
+}
+
+.comment-line2{
+
+    position: fixed;
+    bottom: 24%;
+    left: 0%;
+    width: 100%;
+    opacity: 0.4;
+
+}
+
+/* animation affect to slide in when comments loaded*/
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Styling for author name  */
+
+.comment-section h1{
+    position: absolute;
+    top: 15%;
+    color: whitesmoke;
+    left: 21%;
+    font-size: 17px;
+    animation: slideIn 0.5s ease;
+
+}
+/* Styling for author pfp */
+
+.comment-section img{
+    color: var(--text-color);
+    width: 90px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    animation: slideIn 0.5s ease;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+}
+/* Styling for text comment */
+
+.comment-section p{
+    color: var(--text-color);
+    position: absolute;
+    top: 19%;
+    left: 21%;
+    animation: slideIn 0.5s ease;
+   
+    
+    
+}
+/* Styling for msg*/
+
+.msg4{
+    position: absolute;
+    top: 86%;
+    color: var(--text-color);
+
+
+}
+
+
+
+
+
+
+/* Styling for post container 2 */
+.post-container2 {
+    /* Set dimensions and center container */
+    width: 600px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 180px;
+    /* Add border radius and background color */
+    border-radius: 40px;
+    background-color: #1f1f1f; 
+    /* Adjust position */
+    transform: translateX(-50%);
+    /* Add box shadow */
+    box-shadow: 0 12px 4px rgba(0, 0, 0, 0.2);
+    /* Position container */
+    position: absolute;
+    top: 80%;
+    left: 62.5%;
+    visibility: hidden;
+}
+/* Styling for uplaoded image */
+
+.myFile {
+    display: block;
+    max-width: 300%;
+    height: 300%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    right: 100px;
+}
+
+
+
+.post-media-container {
+    display: inline-block; /* Allow multiple media containers to appear horizontally */
+    max-width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-media-container img {
+    display: block;
+    width: 150%;
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio and contain within container */
+}
+
+.post-media-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adjust the shadow according to your preference */
+}
+
+.insert-file{
+    display: block;
+    max-width: 200%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+
+}
+
+.insert-file:hover{
+    transform: scale(1.05);
+
+}
+
+/* Styling for decorative lines for post container */
+.top-line, .bottom-line {
+    /* Set border properties */
+    border-top: 2px solid rgba(255, 255, 255, 0.2); /*  border color with transparency */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); 
+    
+    height: 1px; 
+    position: absolute;
+    width: 100%;
+}
+
+/* Styling for top line */
+.top-line {
+    top: 20%;
+    left: 0%;
+}
+
+/* Styling for bottom line */
+.bottom-line {
+    bottom: 20%;
+    left: 0%;
+}
+
+/* Styling for headings within post container 1 */
+.post-container1 h3 {
+    position: absolute;
+    color: var(--text-color);
+    top: 10%;
+    left: 16%;
+    font-size: 20px;
+}
+
+/* Styling for headings within post container 2 */
+.post-container2 h4 {
+   
+    position: absolute;
+    color: var(--text-color);
+    top: 10%;
+    left: 16%;
+    font-size: 20px;
+}
+
+/* Styling for user default image for post containers */
+.user-defualt13 {
+    
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top: 2.5%;
+    left: 3%;
+}
+
+/* Styling for heart icon */
+.ri-heart-fill {
+    /* Set color, position, and transition */
+    color: var(--text-color);
+    position: absolute;
+    right: 84%;
+    bottom: 5%;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 0px;
+    white-space: nowrap;
+    transition: 0.5s;
+    /* Set cursor */
+    cursor: pointer;
+}
+
+/* Styling for heart icon when clicked */
+.ri-heart-fill.clicked {
+    color: red;
+}
+
+/* Hover effect for heart icon */
+.ri-heart-fill:hover {
+    bottom: 7%;
+}
+
+/* Styling for dislike icon */
+.ri-dislike-fill {
+
+    color: var(--text-color);
+    position: absolute;
+    right: 74%;
+    bottom: 5%;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 0px;
+    white-space: nowrap;
+    transition: 0.5s;
+
+    cursor: pointer;
+}
+
+/* Styling for dislike icon when clicked */
+.ri-dislike-fill.clicked {
+    color: red;
+}
+
+/* Hover effect for dislike icon */
+.ri-dislike-fill:hover {
+    bottom: 7%;
+}
+
+/* Styling for chat icon */
+.ri-chat-3-fill {
+    
+    color: var(--text-color);
+    position: absolute;
+    right: 64%;
+    bottom: 5%;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 0px;
+    white-space: nowrap;
+    transition: 0.5s;
+  
+    cursor: pointer;
+}
+
+/* Hover effect for chat icon */
+.ri-chat-3-fill:hover {
+    bottom: 7%;
+    color: var(--main-color);
+}
+
+/* Styling for paragraph within post container 1 */
+.container_text {
+    
+    color: whitesmoke;
+    font-size: 20px;
+    position: absolute;
+    left: 8%;
+    top: 25%;
+}
+
+/* Styling for paragraph within post container 2 */
+.post-container2 p2 {
+    
+    color: whitesmoke;
+    font-size: 20px;
+    left: 7%;
+}
+
+/* Styling for clicked heart icon within post container 2 */
+.post-container2 .ri-heart-fill.clicked {
+    color: red;
+}
+
+/* Styling for clicked dislike icon within post container 2 */
+.post-container2 .ri-dislike-fill.clicked {
+    color: red;
+}
+
+
+
+
+/* Styling for Search content */
+
+
+
+
+/* Styling for search container */
+.Search {
+    /* Set position and alignment */
+    position: absolute;
+    left: 27%;
+    top: 0%;
+    align-items: center;
+    /* Set padding and border radius */
+    padding: 14px;
+    border-radius: 28px;
+    /* Set background color and width */
+    background: #faf5f5;
+    width: 400px;
+    /* Define transitions */
+    transition: 5s, box-shadow 0.5s ease;
+    transition: visibility 0s, opacity 0.5s ease, top 0.5s ease;
+    /* Set initial visibility and opacity */
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Styling for search container when focused */
+.Search:focus-within {
+    /* Change background color */
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Styling for search input */
+.search-input {
+   
+    font-size: 18px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333;
+    /* Set margin and remove outline and border */
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    /* Expand to fill available space */
+    flex: 1;
+    cursor: pointer;
+}
+
+/* Styling for search input placeholder and search icon */
+.search-input::placeholder,
+.ri-search-line {
+   
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Styling for search container when targeted */
+#search-target:target {
+    /* Set visibility, position, and opacity */
+    visibility: visible;
+    top: 3%;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* Styling for returning back from register and login divs and styling for both login and register div sections  */
+
+/* Styling for back text for login */
+.back-text{
+    position: fixed;
+    color: var(--text-color);
+    font-size: 50px;
+    left: 10%;
+    top:7%;
+    transition: 0.1s;
+    cursor: pointer;
+    visibility: hidden;
+
+}
+
+
+/* Styling for back icon arrow */
+.back-item i{
+    color: var(--text-color);
+    position: fixed;
+    font-size: 60px;
+    left:6%;
+    top:9%;
+    transition: .1s;
+    cursor: pointer;
+    
+    
+}
+/* Hover effect for back icon */
+.back-item i:hover{
+    color: var(--main-color);
+    font-size: 63px;
+}
+/* Styling for back text when back icon is hovered */
+.back-item:hover .back-text{
+    
+    visibility: visible;
+    top: 8%;
+}
+
+/* Styling for login and register logos */
+.Logo-login-container h1{
+    color: var(--text-color);
+    position: fixed;
+    left: 32%;
+    top: 6.5%;
+    font-size: 100px;
+    transition: .5s; /* applying smooth transition of 0.5 seconds*/
+    
+
+}
+
+
+
+/* Styling for main */
+.LoginMainLogo{
+    position: fixed;
+    color: var(--text-color);
+    left: 59%;
+    top:3%;
+    font-size: 150px;
+    transition: 1s;
+    animation: hoverAnimation 2s infinite alternate;
+    transform:translate(-6.5%)
+
+    
+
+}
+
+
+
+
+
+/* styling for the login form */
+.Login-dream {
+    width: 600px;
+    margin: 0 auto;
+    padding: 90px;
+    border-radius: 20px;
+    background-color: white;
+    position: fixed; 
+    bottom: 18%;
+    left: 35%;
+}
+
+/* styling for the login header */
+.login-dream h1 {
+    padding: 20px;
+    border-bottom: 1px solid silver;
+    color: var(--main-color);
+}
+
+/* styling for text input fields username and passwrod */
+.txt_field {
+    margin: 20px 0;
+    position: relative;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #adadad;
+    outline: none;
+}
+
+/* styling for input labels */
+.txt_field label {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    font-size: 16px;
+    transition: .5s; /* apply smooth transition of 0.5 seconds*/
+}
+
+/* styling for input labels when input is focused or valid */
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -30px; /* postion of label changes by 10 px when focused to add animation effect*/
+    color: var(--main-color); /* color change to main color*/
+}
+
+/* styling for the submit button */
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background: #258cd1;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+/* hover styling for the submit button */
+input[type="submit"]:hover {
+    background: var(--main-color);
+    transition: .5s;
+}
+
+/* styling for the signup link */
+.signup_link {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Styling for the signup link text */
+.signup_link a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+/* hover styling for the signup link text */
+.signup_link a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Styling for back text for register */
+.back-text2 {
+    
+    position: fixed;
+    color: var(--text-color);
+    font-size: 50px;
+    left: 10%;
+    top: 7%;
+    transition: 0.1s;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+/* Styling for back icon for register */
+.back-item2 i {
+    color: var(--text-color);
+    position: fixed;
+    font-size: 60px;
+    left: 6%;
+    top: 9%;
+    transition: .1s;
+    cursor: pointer;
+}
+
+/* Hover effect for back icon */
+.back-item2 i:hover {
+    /* Change color and font size on hover */
+    color: var(--main-color);
+    font-size: 63px;
+}
+
+/* Styling for back text when back icon is hovered */
+.back-item2:hover .back-text2 {
+  
+    visibility: visible;
+    top: 8%;
+}
+
+/* Styling for register page logo */
+.Logo-register-container h1 {
+   
+    color: var(--text-color);
+    position: fixed;
+    left: 32%;
+    top: 6.5%;
+    font-size: 100px;
+    transition: .5s;
+}
+
+/* Styling for main register logo */
+.RegisterMainLogo {
+
+    position: fixed;
+    color: var(--text-color);
+    left: 59%;
+    top: 3%;
+    font-size: 150px;
+    transition: 1s;
+    /* hover animation for cloud*/
+    animation: hoverAnimation 2s infinite alternate;
+    transform: translate(-6.5%);
+}
+
+
+/* styling for the register form */
+.register-dream {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    position: fixed; 
+    bottom: 10%;
+    left: 31%;
+}
+
+/* styling for the register header */
+.register-dream h1 {
+    padding: 20px;
+    border-bottom: 1px solid silver;
+}
+
+/* styling for the main user info */
+.main-user-info {
+    display: flex; /* use flex for layout */
+    flex-wrap: wrap; /* allow flex items to wrap to the next row */
+    justify-content: space-between; /* spread items evenly with space in-between */
+    padding: 20px 0; 
+}
+
+/* styling for user input boxes */
+.user-input-box {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 50%;
+    padding-bottom: 15px; 
+}
+
+/* styling for labels within user input boxes */
+.user-input-box label {
+    width: 95%; 
+    color: black; /* set text color to black */
+    font-size: 20px; 
+    font-weight: 400; 
+    margin: 5px 0; /* add margin above and below the label */
+}
+
+/* styling for input fields within user input boxes */
+.user-input-box input {
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+/* styling for the gender title */
+.gender-title {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid white;
+}
+
+/* styling for gender category */
+.gender-category {
+    margin: 15px 0;
+    color: black;
+}
+
+/* styling for labels within gender-category class*/
+.gender-category label {
+    padding: 0 20px 0 5px; /* Add padding for alignment */
+}
+
+/* styling for labels, input fields, and submit input */
+.gender-category label,
+.gender-category input,
+.submit input {
+    cursor: pointer;/* to change the cursor to a pointing hand symbol when hovering over*/
+}
+
+/* styling for the submit */
+.submit {
+    margin-top: 40px; /* Add top margin */
+}
+
+/* styling for the submit button */
+.submit input {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    color: rgb(209, 209, 209);
+    background: #1DA1F2;
+}
+
+/* hover effect for the submit button */
+.submit input:hover {
+    background: var(--main-color); /* change the background color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Styling for message section*/
+
+
+
+/* Styling for message container */
+.Message-container1 {
+    
+    position: fixed;
+    padding-top: 70%;
+    top: 0%;
+    border-right: 1px solid whitesmoke;
+    max-width: 500px;
+    left: 50%;
+}
+
+
+
+/* Styling for user defaults */
+.user-info1 img{
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top: -40%;
+    right:160px;
+
+    
+    
+}
+
+.user-info2 img{
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top:-70%;
+    right: 160px;
+
+    
+    
+}
+
+.user-info3 img{
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top:-70%;
+    right: 160px;
+
+    
+    
+}
+
+
+
+
+.user-info1 {
+
+    top:20%;
+    position: absolute;
+    color: var(--text-color);
+    font-size: 25px;
+    left: 33%;
+    
+
+    
+}
+
+.user-info2 {
+
+    top:35%;
+    position: absolute;
+    color: var(--text-color);
+    font-size: 25px;
+    left: 33%;
+    
+
+    
+}
+
+.user-info3 {
+
+    top: 50%;
+    position: absolute;
+    color: var(--text-color);
+    font-size: 25px;
+    left: 33%;
+    
+
+    
+}
+.user-info4 {
+
+    top:2.5%;
+    position: fixed;
+    color: var(--text-color);
+    font-size: 25px;
+    left: 60%;
+    
+
+    
+}
+
+.user-defualt5{
+    color: var(--text-color);
+    width: 90px;
+    position: fixed;
+    top:2%;
+    left:54%;
+
+}
+
+
+
+
+
+.message-top-line{
+    position: fixed;
+    display: block;
+    margin: 30px 0;
+    height: 1px;
+    border: none;
+    background: white;
+    top: 10%;
+    right:0%;
+    width: 50%;
+    height: 0.3%;
+    opacity: 0.2;/* setting opcaity to 0,2*/
+
+
+}
+/* Styling for message top line 2 */
+.message-top-line2{
+    position: absolute;
+    display: block;
+    margin: 30px 0;
+    height: 1px;
+    border: none;
+    background: white;
+    top: 14%;
+    right:50%;
+    width: 26%;
+    height: 0.3%;
+    opacity: 0.2;
+
+
+}
+
+/* Styling for user content */
+.User{
+    color: var(--text-color);
+    font-size: 30px;
+    position: absolute;
+    left: 26%;
+    top:4%;
+}
+/* Styling for message header */
+.Message h2{
+    color: var(--text-color);
+    font-size: 18px;
+    position: absolute;
+    left: 26%;
+    top:13%;
+}
+/* Styling for  chat icon */
+.ri-chat-3-line{
+    color: var(--text-color);
+    font-size: 60px;
+    position: absolute;
+    left: 43%;
+    top:4%;
+
+}
+/* Styling for message-user form container */
+.message-user {
+    --padding: 14px;
+    position: fixed;
+    right: 7%;
+    top:90%;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #faf5f5;
+    width: 700px;
+    transition: 5s , box-shadow 0.5s ease;
+    
+   
+}
+/* Styling for message focus within change background color */
+.message-user:focus-within {
+    background: #FFFFFF;
+    
+}
+/* Styling for message input */
+.message-input {
+    font-size: 18px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
+}
+
+/* Stylings for icons of the message section*/
+
+.ri-chat-off-fill{
+    color: var(--text-color);
+    font-size: 100px;
+    position: fixed;
+    left:72%;
+    top:40%;
+    opacity: 0.1;
+}
+
+.ri-phone-fill{
+    color: var(--text-color);
+    font-size: 34px;
+    position: fixed;
+    top:5%;
+    right:7%;
+
+}
+.ri-vidicon-fill{
+    color: var(--text-color);
+    font-size: 34px;
+    position: fixed;
+    top:5%;
+    right:4%;
+
+}
+
+.ri-information-2-fill{
+    color: var(--text-color);
+    font-size: 34px;
+    position: fixed;
+    top:5%;
+    right:10%;
+
+}
+
+/* Styling for message-input place holder */
+.message-input::placeholder{
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling for  notifcation section */
+
+/* Styling for Notification header */
+.Notification h1 {
+    font-size: 60px; 
+    color: var(--text-color); 
+    position: absolute;
+    left: 62%; 
+    top: 10%; 
+    transform: translateX(-50%); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+/* Styling for Notification horizontal line */
+.Notification hr{
+    position: absolute;
+    display: block;
+    margin: 30px 0;
+    height: 1px;
+    border: none;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, white));
+    top: 20%;
+    left: 27%;
+    width: 70%;
+    height: 0.3%;
+
+}
+/* Keyframes for the shaking animation */
+@keyframes shake {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+/* Styling for the  logo */
+.ri-notification-4-fill {
+    color: var(--text-color); 
+    position: absolute;
+    right: 36%; 
+    top: 3%; 
+    font-size: 70px; 
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+    cursor: pointer; /* Cursor style on hover */
+}
+
+.ri-notification-4-fill:hover {
+    animation: shake 0.5s ease ; /* Apply shaking animation on hover */
+}
+
+
+/* Styling for Notification container */
+.Noti1 {
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background color */
+    color: #ffffff; /* Text color */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    border-top: 5px solid var(--main-color); 
+}
+
+.ri-notification-off-fill {
+    
+    color: var(--text-color);
+    position: absolute;
+    left: 60%;
+    top: 35%;
+    font-size: 80px;
+    opacity: 0.1;
+}
+
+
+
+/* Styling for user default icon for notifications */
+
+.user-defualt8{
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top:5%;
+    left:-16%;
+
+    
+    
+}
+/* Styling for notification container span */
+.notification-container1 span{
+    text-align: center;
+    color: var(--text-color);
+    
+
+
+}
+
+
+
+
+
+.user-defualt9{
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top:5%;
+    left:-16%;
+
+    
+    
+}
+
+.notification-container2 span{
+    text-align: center;
+    color: var(--text-color);
+    
+
+
+}
+
+
+
+
+.user-defualt10{
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top:5%;
+    left:-16%;
+
+    
+    
+}
+
+.notification-container3 span{
+    text-align: center;
+    color: var(--text-color);
+    
+
+
+}
+
+
+
+
+
+.user-defualt11{
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top:5%;
+    left:-16%;
+
+    
+    
+}
+
+.notification-container4 span{
+    text-align: center;
+    color: var(--text-color);
+    
+
+
+}
+
+
+
+
+
+.user-defualt12{
+    color: var(--text-color);
+    width: 70px;
+    position: absolute;
+    top:5%;
+    left:-16%;
+
+    
+    
+}
+
+.notification-container5 span{
+    text-align: center;
+    color: var(--text-color);
+    
+
+
+}
+
+
+
+
+
+ h5{
+    color: var(--text-color);
+    position: absolute;
+    left: 59.5%;
+    top: 6.5%;
+    font-size: 35px;
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling for Post section */
+
+
+/* Styling for user default icon */
+.user-defualt0{
+    color: var(--text-color);
+    width: 250px;
+    position: absolute;
+    top:10%;
+    left:35%;
+
+    
+    
+}
+/* Styling for Post button */
+.Post{
+	border: 1px solid rgb(131, 131, 131) ;
+    position: absolute;
+    left:72%;
+    top:6%;
+	padding: 12px 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	background: rgb(131, 131, 131);
+	border-radius: 20px;
+	letter-spacing: 1px;
+    transition: 0.1s;
+		
+}
+
+
+/* hover effect for Post button */
+.Post:hover{
+	border-color: #5a5a5a;
+	background: #5a5a5a;
+	transition:0.1s;
+	cursor: pointer;
+	
+	
+	
+}
+
+/* Styling for edit button */
+.Edit{
+	border: 1px solid rgb(131, 131, 131) ;
+    position: absolute;
+    left:82%;
+    top:6%;
+	padding: 12px 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	background: rgb(131, 131, 131);
+	border-radius: 20px;
+	letter-spacing: 1px;
+    transition: 0.1s;
+		
+}
+
+
+/* hover effect for edit button*/
+.Edit:hover{
+	border-color: #5a5a5a;
+	background: #5a5a5a;
+	transition:0.1s;
+	cursor: pointer;
+	
+	
+	
+}
+
+/* Styling for Post button */
+.Follow{
+	border: 1px solid rgb(131, 131, 131) ;
+    position: absolute;
+    left:72%;
+    top:6%;
+	padding: 12px 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	background: rgb(131, 131, 131);
+	border-radius: 20px;
+	letter-spacing: 1px;
+    transition: 0.1s;
+		
+}
+
+
+/* hover effect for Post button */
+.Follow:hover{
+	border-color: #5a5a5a;
+	background: #5a5a5a;
+	transition:0.1s;
+	cursor: pointer;
+	
+	
+	
+}
+
+/* Styling for edit button */
+.unfollow{
+	border: 1px solid rgb(131, 131, 131) ;
+    position: absolute;
+    left:82%;
+    top:6%;
+	padding: 12px 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	background: rgb(131, 131, 131);
+	border-radius: 20px;
+	letter-spacing: 1px;
+    transition: 0.1s;
+		
+}
+
+
+/* hover effect for edit button*/
+.unfollow:hover{
+	border-color: #5a5a5a;
+	background: #5a5a5a;
+	transition:0.1s;
+	cursor: pointer;
+	
+	
+	
+}
+/* Styling for settings icon  */
+.ri-settings-3-line{
+
+    color: var(--text-color);
+    position: absolute;
+    left: 89%;
+    top: 7%;
+    font-size: 35px;
+    font-weight: 300;
+    padding: 0px;
+    white-space: nowrap;
+    transition: all .50s ease;
+
+}
+/* Styling for profile data */
+.profile-post{
+    color: var(--text-color);
+    position: absolute;
+    left: 53%;
+    top: 20%;
+    font-size: 40px;
+
+
+}
+
+.Followers{
+    color: var(--text-color);
+    position: absolute;
+    left: 64%;
+    top: 20%;
+    font-size: 40px;
+
+
+}
+
+.Following{
+
+    color: var(--text-color);
+    position: absolute;
+    left: 79%;
+    top: 20%;
+    font-size: 40px;
+
+
+
+}
+/* Styling for profile line */
+.Profile-line{
+
+    position: absolute;
+    display: block;
+    margin: 30px 0;
+    height: 1px;
+    border: none;
+    
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, white));
+    top: 50%;
+    left: 27%;
+    width: 70%;
+    height: 0.3%;
+
+
+}
+/* Styling for no posts message and camera icon */
+.no-posts{
+
+    color: var(--text-color);
+    position: absolute;
+    left: 52%;
+    top: 67%;
+    font-size: 80px;
+    opacity: 0.1;
+
+
+}
+
+.ri-camera-off-fill{
+    color: var(--text-color);
+    position: absolute;
+    left: 69%;
+    top: 69%;
+    font-size: 90px;
+    opacity: 0.1;
+
+
+}
+/* Styling for about section */
+.about{
+    color: var(--text-color);
+    position: absolute;
+    left: 48%;
+    top: 34%;
+    font-size: 25px;
+}
+/* Styling for Post form container */
+.Post-container {
+    max-width: 800px; /* Increased max-width */
+    width: 700px;
+    position: fixed;
+    top: 22%;
+    left: 42%;
+    margin: 50px auto;
+    background-color: #e9e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-in; /* Apply the animation */
+}
+
+/* Styling for Post container h2 */
+.Post-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color); /* Use custom text color */
+}
+
+
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for Post container labels and inputs */
+.Post-container label {
+    margin-bottom: 8px;
+    color: #333; /* Label text color */
+}
+
+
+/* Styling for Post container input[type="text"] and textarea on focus */
+.Post-container input[type="text"]:focus,
+.Post-container textarea:focus {
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+   
+}
+
+.Post-container .text_title{
+    position: absolute;
+    top: 0%;
+
+}
+
+/* Styling for file input within .Post-container */
+.Post-container input[type="file"] {
+    margin-bottom: 20px;
+}
+
+/* Styling for submit button within .Post-container */
+.Post-container input[type="submit"] {
+    padding: 10px 20px; /* Adds padding of 10px on the top and bottom, and 20px on the left and right */
+    background-color: var(--main-color);
+    color: white; 
+    border: none; 
+    border-radius: 4px; /* Adds border-radius for rounded corners */
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+    transition: background-color 0.3s; /* Adds a smooth transition effect for the background color change */
+}
+
+/* Styling for submit button on hover within .Post-container */
+.Post-container input[type="submit"]:hover {
+    background-color: #45a049; /* Changes the background color to #45a049 when hovered over */
+}
+
+
+/* Styling for custom alert message when logging out */
+.customAlert{
+    position: fixed;
+    top:48%;
+    display: none;
+    font-size: 35px;
+    left: 50%;
+    padding: 20px;
+    border: 1px solid #000000;
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent white background */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Transparent black shadow */
+    border-radius: 5px;
+    opacity: 1;
+
+
+}
+
+
+
+/* Styling for alert container span */
+.alert-container span {
+    text-align: center;
+    color: var(--text-color);
+}
+/*stlying to show the alert message pop up*/
+.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in; /* Apply the animation */
+    
+}
+
+

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Meta information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>DayDream</title>
+    <!-- External CSS file -->
+    <link rel="stylesheet" type="text/css" href="./CSS/DayDream.css">
+    <!-- External icon libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts for the website -->
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Pixelify+Sans:wght@400;500&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header section -->
+<header>
+    <!-- Navbar container -->
+    <div id="navbar-container" class="navbar-container">
+        <div class="All">
+            <!-- Logo and navigation links -->
+            <div class="Logo-container">
+                <h1>DayDream</h1>
+                <hr class="logo-line">
+                <span class="MainLogo"><i class="ri-cloud-line"></i></span>
+            </div>
+            <!-- Navigation menu -->
+            <ul class="navbar">
+                <!-- Home link -->
+                <li class="nav-item">
+                    <i class="ri-home-3-fill"></i><a id="home-link" class="home-link" href="#home-target">Home</a>
+                </li>
+                <!-- Search link -->
+                <li class="nav-item">
+                    <i class="ri-search-2-line"></i><a id="search-link" class="search-link" href="#search-target">Search</a>
+                </li>
+                
+                <!-- Notification link -->
+                <li class="nav-item">
+                    <i class="ri-notification-2-fill"></i><a id="notification-link" class="notification-link" href="#notification-target">Notification</a>
+                </li>
+                <!-- Profile link -->
+                <li class="nav-item">
+                    <i class="ri-user-3-fill"></i><a id="profile-link" class="Profile-link" href="#profile-target">Profile</a>
+                </li>
+                <!-- Login link -->
+                <li class="Login-item" id="Login-item">
+                    <a href="#login-link" id="login-link" class="login-link">
+                        <i class="ri-login-box-line"></i>
+                        <p class="login-text">Login</p>
+                    </a>
+                </li>
+                <!-- Register link -->
+                <li class="Register-item" id="Register-item">
+                    <a href="#register-link" id="register-link" class="register-link">
+                        <i class="ri-registered-line"></i>
+                        <p class="register-text">Register</p>
+                    </a>
+                </li>
+                <!-- Logout link (hidden by default) -->
+                <li class="Logout-item" id="Logout-item">
+                    <a id="logout-link" class="logout-link" href="#login-target">
+                        
+                        <i class="ri-logout-box-line"></i>
+                        <p class="Logout-text">Logout</p></a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</header>
+    <!-- Container for the entire webpage -->
+    <div class="container">
+        
+        <!-- Home section -->
+        <div class="Home" id="Home">
+            <!-- Horizontal line styled as a diamond shape -->
+            <hr class="diamond">
+            <!-- Horizontal line for header -->
+            <hr class="diamond-line">
+            <!-- Heading for posts section -->
+            <h2 id="h2">FEED</h2>
+            <div id="Post-containers">
+                <!-- First post container -->
+                <div class="post-container1" id="postContainer">
+
+                    <!-- User avatar -->
+                    <img src="./IMAGES/user-defualt.png" class="user-defualt13" alt="">
+                    <!-- Username -->
+                    <h3 id="postName">Username</h3>
+                    <!-- Post content -->
+                    <p class="container_text">bruh what am i even gonna do tmr im so bored any recommendations???</p>
+                    <!-- Icons for liking, disliking, and commenting on the post -->
+                    <i class="ri-heart-fill" id="heartIcon1"></i>
+                    <i class="ri-dislike-fill" id="dislikeIcon1"></i>
+                    <i class="ri-chat-3-fill" id="Comments"></i>
+                   
+                    <!-- Horizontal lines above and below the post -->
+                    <hr class="top-line">
+                    <hr class="bottom-line">
+
+                    <!-- Comments section -->
+                    <div class="comment-form-container" data-post-id="postId">
+                        <h1 class="post-user" id="post-user">Username</h1>
+                        <!-- User avatar -->
+                        <img src="./IMAGES/user-defualt.png" class="user-defualt14" alt="">
+                        <div class="comment-section" id="commentSection">
+                            <i class="ri-chat-off-line" id="no-comment"></i> 
+                            <img src="./IMAGES/user-defualt.png" class="user-defualt15" alt="">
+                            <h1 class="comment-1">Username</h1>
+                            <p class="comment-text"> Hey man welcome to the platform hope for some cool content!</p>
+         
+
+                        </div>
+                        
+                        <i class="ri-chat-smile-3-fill"></i><textarea placeholder="Write a comment..." name="comment" id="comment-text"></textarea>
+                        <button type="submit" class="btn" onclick="addComment()">Post</button>
+                        <p class="msg4"></p>
+                        <!-- Like count -->
+                        <div class="like-count">0 Likes</div>
+                        <!-- Comment count -->
+                        <div class="comment-count"> 0 Comments</div>
+                        <hr class="comment-line1">
+                        <hr class="comment-line2">
+                        <button class="comment-close" id="comment-close">Close</button>
+                    </div>
+                </div>
+                <!-- Second post container -->
+                <div class="post-container2">
+                    <!-- User avatar -->
+                    <img src="./IMAGES/user-defualt.png" class="user-defualt14" alt="">
+                    <!-- Username -->
+                    <h4>Username</h4>
+                    <!-- Post content -->
+                    <p>bro did u see that new video that shiii was crazyyyyyyyyyy</p>
+                    <!-- Icons for liking, disliking, and commenting on the post -->
+                    <i class="ri-heart-fill" id="heartIcon2"></i>
+                    <i class="ri-dislike-fill" id="dislikeIcon2"></i>
+                    <i class="ri-chat-3-fill"></i>
+                    <!-- Horizontal lines above and below the post -->
+                    <hr class="top-line">
+                    <hr class="bottom-line">
+                    
+                </div>
+
+            </div>
+            
+        </div>
+        
+
+        
+        <!-- Search section -->
+        <div id="search-target" class="Search">
+            <!-- Form for searching -->
+            <form>
+                <!-- Search icon -->
+                <i class="ri-search-line"></i>
+                <!-- Search input field -->
+                <input class="search-input" id="searchInput" type="search" placeholder="Search">
+                <div id="searchResults"></div>
+            </form>
+        </div>
+        
+        
+        
+        <!-- Register section -->
+        <div class="Register">
+            <!-- Back button -->
+            <div class="back-item2">
+                <a id="back-link2" class="back-link2" href="#register-target">
+                    <i class="ri-arrow-left-circle-line"></i>
+                    <p class="back-text2">back</p>
+                </a>
+            </div>
+            <!-- Logo and title -->
+            <div class="Logo-register-container">
+                <h1>DayDream</h1>
+                
+                <span class="RegisterMainLogo"><i class="ri-cloud-line"></i></span>
+            </div>
+            <!-- Registration form -->
+            <div class="register-dream">
+                <!-- Heading for registration -->
+                <h1>Register</h1>
+                <!-- Form for registration -->
+                <form>
+                    <!-- Container for user info -->
+                    <div class="main-user-info">
+                        <!-- Input fields for full name, username, phone number, password, and confirm password -->
+                        <div class="user-input-box">
+                            <label> Full Name </label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name">
+                        </div>
+                        <div class="user-input-box">
+                            <label> Username </label>
+                            <input type="text" id="username" name="username" placeholder="Enter Username">
+                        </div>
+                        <div class="user-input-box">
+                            <label> Phone Number </label>
+                            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number">
+                        </div>
+                        <div class="user-input-box">
+                            <label> Password </label>
+                            <input type="password" id="password" name="password" placeholder="Enter Password">
+                        </div>
+                        <div class="user-input-box">
+                            <label> Confirm Password </label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    <!-- Container for gender selection -->
+                    <div class="gender-details-box">
+                        <!-- Title for gender section -->
+                        <span class="gender-title"> Gender </span>
+                        <!-- Options for selecting gender -->
+                        <div class="gender-category">
+                            <input type="radio" name="gender" id="male">
+                            <label> Male </label>
+                            <input type="radio" name="gender" id="female">
+                            <label> Female </label>
+                            <input type="radio" name="gender" id="other">
+                            <label> Other </label>
+                        </div>
+                    </div>
+                    <!-- Button to submit registration -->
+                    <div class="submit">
+                        <input type="button" value="Register" onclick="register()">
+                    </div>
+                    <!-- Placeholder for registration message -->
+                    <p id="msg"></p>
+                    <p id="Feedback"></p>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Profile section -->
+        <div class="Profile">
+            <!-- Horizontal line -->
+            <hr class="Profile-line">
+            <!-- User avatar -->
+            <img src="./IMAGES/user-defualt.png" class="user-defualt0" alt="">
+            <!-- Username -->
+            <h5 id="Profile_name">Username</h5> 
+            <!-- Buttons for posting and editing profile -->
+            <button id="Post" class="Post">Post</button> 
+            <button class="Edit">Edit</button><i class="ri-settings-3-line"></i>
+            <!-- Statistics about posts, followers, and following -->
+            <h1 class="profile-post">0 posts</h1>
+            <h2 class="Followers">0 Followers</h2>
+            <h3 class="Following">0 Following</h3>
+            <!-- About section -->
+            <h4 class="about">about section empty...</h4>
+            <!-- Message for no posts -->
+            <div id="no-posts">
+                <h5 class="no-posts">No Posts</h5><i class="ri-camera-off-fill"></i>
+            </div>
+            
+            
+
+            </div>
+        </div>
+        <!-- Placeholder for dynamically created userProfile -->
+        <div class="userProfilePlaceholder"></div>
+        
+        
+        <!-- Notification section -->
+        <div class="Notification">
+            <!-- Horizontal line -->
+            <hr class="noti-line">
+            <!-- Heading for notifications -->
+            <h1>Notifications</h1><i class="ri-notification-4-fill"></i>
+
+            <div class="noti-container" id="noti-container">
+                <!-- Individual notifications -->
+                
+                    <i class="ri-notification-off-fill"></i>
+                
+                
+            </div>
+        </div>
+        
+        <!-- Login section -->
+        <div class="Login">
+            <!-- Back button -->
+            <div class="back-item">
+                <a id="back-link" class="back-link" href="#home-target">
+                    <i class="ri-arrow-left-circle-line"></i>
+                    <p class="back-text">back</p>
+                </a>
+            </div>
+            <!-- Logo and title -->
+            <div class="Logo-login-container">
+                <h1>DayDream</h1>
+                
+                <span class="LoginMainLogo"><i class="ri-cloud-line"></i></span>
+            </div>
+            <!-- Login form -->
+            <div class="Login-dream">
+                <!-- Heading for login -->
+                <h1>Login</h1>
+                <!-- Form for login -->
+                <form id="#mysignin" onsubmit="return isRegistered();">
+                    <!-- Input fields for username and password -->
+                    <div class="txt_field">
+                        <input type="text" id="usernameInput" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" id="passwordInput" required>
+                        <label>Password</label>
+                    </div>
+                    <!-- Option for forgot password -->
+                    <div class="forgot" >
+                        forgot password?
+                    </div>
+                    <!-- Feedback message -->
+                    <p id="feedback"></p>
+                    <!-- Submit button -->
+                    <input type ="submit" value="login">
+                    <!-- Link to registration page -->
+                    <div class="signup_link" id="Signup">
+                        not a member?<a>Signup</a>
+                    </div>
+                    <!-- Placeholder for registration message -->
+                    <p id="msg2"></p>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Logout section -->
+        <div class="Logout"></div>
+        
+        <!-- Custom alert for logout -->
+        <div id="customAlert" class="customAlert">
+            <div class="alert-container">
+                <span>Successfully Logged out!</span>
+            </div>
+        </div>
+        
+        <!-- Post form section -->
+        <div id="Post-form" class="Post-form">
+            <div class="Post-container">
+                
+                <!-- Textarea for post content -->
+                <label for="text" class="text_title">Text:</label>
+                <textarea id="text" name="text" rows="13" cols="90" maxlength="90">
+
+                </textarea>
+                <!-- Character count for post content -->
+                <div>Characters remaining: <span id="charCount">100</span></div>
+                    
+                <!-- Input fields for uploading image and video -->
+                <label >Image:</label>
+                <input type="file" id="myFile" class="insert-file" name="myFile" accept="image/*">
+                    
+                
+                <!-- Submit button -->
+                <input type="submit" value="Upload" onclick="uploadFile()">
+                <div id="msg3"></div>
+            </div>
+        </div>
+    
+    
+    <!-- Script files -->
+    <script type="module" src="./JS/Register.js"></script>
+    <script  src="./JS/Login.js"></script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/fileUpload.js"></script>
+    <script  src="./JS/Posts.js"></script>
+    <script src="./JS/comment.js"></script>
+    <script type="module" src="./JS/validation.js"></script>
+
+  
+</body>
+
+
+</html>
+
